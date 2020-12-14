@@ -1,26 +1,84 @@
+
 body {
-    background: linear-gradient(#ff33cc,#006666);
-    height: 100%;
-      margin: 0;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg,#ff33cc,#ff6699, #66ccff, #0066ff);
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes change {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  h1 {
+    color: #ccffff; 
+    font-family: 'Carter One';
+  }
+  
+  h2 {
+    color: #ccffff; 
+    font-family: 'Carter One'; 
+    text-align: center;
+  }
+  
+  p {
+    color: #ccffff; 
+    font-weight: bold; 
+    font-size: 25px; 
+    font-family: 'Forum'; 
+    text-align: center;
   }
   
   #container {
     display:grid;
+    border: 5px solid;
+    background: none;
+    animation: button 10s ease-in-out infinite;
   }
   
-  button {
+  .btn {
+    border: 5px solid;
     background: none;
-    border: 2px solid;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
     padding: 1em 2em;
-    color: #8de3f8;
+    animation: button 10s ease-in-out infinite;
+    overflow: hidden;
+  }
+  
+  @keyframes button {
+    0% {
+      color: #ff33cc;
+    }
+    50% {
+      color: #0066ff;
+    }
+    100% {
+      color: #ff33cc;
+    }
+  }
+  
+  .btn:hover {
+    color: #66ff99;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+    transition: 1s;
   }
   
