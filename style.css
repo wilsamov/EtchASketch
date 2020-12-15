@@ -1,109 +1,109 @@
 #container {
-    display: grid;
-    height: 35vw;
-    width: 35vw;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    border: 5px solid;
-    border-radius: 8px;
-    animation: button 10s ease-in-out infinite;
+  display: grid;
+  height: 30vw;
+  width: 30vw;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  border: 5px solid;
+  border-radius: 8px;
+  animation: button 10s ease-in-out infinite;
+}
+
+.grid-item {
+  border: 3px rgba(0, 0, 0, 0.041) solid;
+}
+
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg,#ff33cc,#ff6699, #66ccff, #0066ff);
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite;
+  overflow: hidden;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .grid-item {
-    border: 3px rgba(0, 0, 0, 0.041) solid;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  
-  body {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(-45deg,#ff33cc,#ff6699, #66ccff, #0066ff);
-    background-size: 400% 400%;
-    animation: change 10s ease-in-out infinite;
-    overflow: hidden;
+  100% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes change {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+}
+
+h1 {
+  color: #ccffff; 
+  font-family: 'Carter One';
+}
+
+h2 {
+  color: #ccffff; 
+  font-family: 'Carter One'; 
+  text-align: center;
+}
+
+p {
+  color: #ccffff; 
+  font-weight: bold; 
+  font-size: 20px; 
+  font-family: 'Forum'; 
+  text-align: center;
+}
+
+#menu {
+  border: 5px solid;
+  border-radius: 20px;
+  background: none;
+  margin: 0.25em;
+  padding: 1em 1em;
+  animation: button 10s ease-in-out infinite;
+}
+
+.btn {
+  border: 5px solid;
+  background: none;
+  font: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  animation: button 10s ease-in-out infinite;
+  overflow: hidden;
+}
+
+@keyframes button {
+  0% {
+    color: #ff33cc;
   }
-  
-  h1 {
-    color: #ccffff; 
-    font-family: 'Carter One';
+  50% {
+    color: #66ccff;
   }
-  
-  h2 {
-    color: #ccffff; 
-    font-family: 'Carter One'; 
-    text-align: center;
+  100% {
+    color: #ff33cc;
   }
-  
-  p {
-    color: #ccffff; 
-    font-weight: bold; 
-    font-size: 20px; 
-    font-family: 'Forum'; 
-    text-align: center;
-  }
-  
-  #menu {
-    border: 5px solid;
-    border-radius: 20px;
-    background: none;
-    margin: 0.25em;
-    padding: 1em 1em;
-    animation: button 10s ease-in-out infinite;
-  }
-  
-  .btn {
-    border: 5px solid;
-    background: none;
-    font: inherit;
-    font-weight: bold;
-    line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
-    animation: button 10s ease-in-out infinite;
-    overflow: hidden;
-  }
-  
-  @keyframes button {
-    0% {
-      color: #ff33cc;
-    }
-    50% {
-      color: #66ccff;
-    }
-    100% {
-      color: #ff33cc;
-    }
-  }
-  
-  .odd:hover {
-    transform: skewX(-10deg);
-    transform: skewY(-10deg);
-    transition: 2s;
-  }
-  
-  .even:hover {
-    transform: skewX(10deg);
-    transform: skewY(10deg);
-    transition: 2s;
-  }
-  
-  .btn:active {
-    transform: scale(1.1);
-    transition: 0.05s;
-  }
+}
+
+.odd:hover {
+  transform: skewX(-10deg);
+  transform: skewY(-10deg);
+  transition: 2s;
+}
+
+.even:hover {
+  transform: skewX(10deg);
+  transform: skewY(10deg);
+  transition: 2s;
+}
+
+.btn:active {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
