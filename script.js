@@ -5,18 +5,24 @@ const thirtytwo = document.getElementById('size32');
 const clearGrid = document.getElementById('clearSelect');
 
 sixteen.addEventListener('click', (e) => {
-    gridSize = 16;
-    addDivs(gridSize);
+  clearSquares();
+  gridSize = 16;
+  addDivs(gridSize);
 });
 
 thirtytwo.addEventListener('click', (e) => {
-    gridSize = 32;
-    addDivs(gridSize);
+  clearSquares();
+  gridSize = 32;
+  addDivs(gridSize);
 });
 
-clearGrid.addEventListener('click', (e) => {
-    clearSquares();
-});
+
+//function that removes grid items
+function clearSquares() {
+  while (container.firstChild) {
+    container.removeChild(container.lastChild);
+  }
+}
 
 function addDivs (gridSize) {
   container.style.setProperty('--grid-rows', gridSize);
